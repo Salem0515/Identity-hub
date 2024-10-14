@@ -1,5 +1,5 @@
 import React from 'react'
-import './AboutUS.css'
+import './About.css'
 import UserIcon from '../../Assets/UserIcon.png'
 const AboutUs = () => {
   return (
