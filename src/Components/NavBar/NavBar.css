@@ -1,0 +1,89 @@
+.nav_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #121212; /* Dark background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.identityHub {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #EEE;
+    font-family: 'Arial', sans-serif;
+}
+
+.identityHub img {
+    width: 40px; /* Adjusted size */
+    height: 40px; /* Adjusted size */
+    margin-right: 0.5rem;
+}
+
+.element {
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.element ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.element li {
+    color: #EEE;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.element li:hover {
+    color: #090EDB; /* Change color on hover */
+    transform: scale(1.1);
+}
+
+.free {
+    background: transparent; /* No background color */
+    color: #ffffff; /* White text color */
+    border: 2px solid #8D1EA2; /* Colored border */
+    border-radius: 30px; /* Rounded corners */
+    padding: 0.5rem 1.5rem; /* Padding for the button */
+    font-weight: bold; /* Bold text */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.free:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.free:after {
+    content: '>'; /* Arrow icon */
+    margin-left: 10px; /* Space between text and arrow */
+    font-size: 1.2rem; /* Slightly larger arrow */
+    color: #ffffff; /* Match arrow color to text */
+}
+
+
+@media (max-width: 768px) {
+    .nav_bar {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .element ul {
+        flex-direction: column; /* Change list to vertical */
+        gap: 10px; /* Reduce space for smaller screens */
+    }
+}
+
+.element li:hover {
+    color: #8D1EA2; /* Change hover color for contrast */
+    text-decoration: underline; /* Add underline for hover */
+}

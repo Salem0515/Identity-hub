@@ -1,0 +1,128 @@
+.service {
+    margin-top: 100px;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px; /* Add some padding for smaller screens */
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: #8D1EA2;
+}
+
+.services {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #8D1EA2;
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.services:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.carts {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Allow wrapping of cards */
+}
+
+.cart {
+    background: linear-gradient(135deg, #1c1f3a, #2e325a);
+    border-radius: 20px;
+    padding: 30px;
+    width: 250px; /* Base width for larger screens */
+    color: #ffffff;
+    position: relative;
+    text-align: left;
+    border-top-right-radius: 100px; /* Rounded corner only on the top right */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cart:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+}
+
+.cart img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.cart h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #e0e0e0;
+}
+
+.cart p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #c2c2c2;
+    margin-bottom: 15px;
+}
+
+.explore {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #8D1EA2;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.explore:hover {
+    color: #f33cc0;
+}
+
+/* Gradient border around the card */
+.cart::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #ff007a, #4e54c8, #8d1ea2);
+    border-radius: 20px;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .cart {
+        width: calc(50% - 20px); /* Two cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .cart {
+        width: 100%; /* Stacking on small screens */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+
+    .services {
+        font-size: 1rem; /* Adjust button size */
+        padding: 0.4rem 1rem;
+    }
+}

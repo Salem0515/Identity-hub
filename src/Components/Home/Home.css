@@ -1,0 +1,163 @@
+.Home {
+    margin: 64px auto;
+    width: 992px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Secure {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #8D1EA2;
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.Secure:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.Home h1 {
+    font-size: 70px;
+    background: linear-gradient(to right, #F33CC0 9%, #4349FF 72%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    padding-top: 100px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Home p {
+    margin-top: 24px;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    display: flex;
+    gap: 20px; /* Add space between buttons */
+    margin-top: 32px;
+}
+
+.buttons .trial,
+.buttons .use {
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttons .trial {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #8D1EA2;
+    border-radius: 30px;
+}
+
+.buttons .trial:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.buttons .use {
+    background: linear-gradient(90deg, #090EDB 29%, #8D1EA2 100%); /* Gradient background */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50px;
+}
+
+.buttons .use:hover {
+    background: linear-gradient(90deg, #8D1EA2 29%, #090EDB 100%); /* Reverse gradient on hover */
+    transform: scale(1.05);
+}
+
+.pictures {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 100%; /* Ensure it takes full width */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.pictures .left,
+.pictures .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between items */
+    flex: 1; /* Allow them to grow */
+    min-width: 200px; /* Prevent too narrow columns */
+}
+
+.pictures img {
+    width: 44px; /* Adjust size as needed */
+    height: 44px;
+    transition: transform 0.3s ease; /* Add transition for images */
+}
+
+.center img {
+    width: 484px;
+    height: 436px;
+}
+
+.pictures img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.pictures .up, 
+.pictures .down, 
+.pictures .UP, 
+.pictures .DOWN {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .Home {
+        width: 90%; /* Full width on small screens */
+    }
+
+    .Home h1 {
+        font-size: 40px; /* Adjust font size */
+        padding-top: 50px; /* Adjust padding */
+    }
+
+    .Home p {
+        font-size: 16px; /* Smaller font size for paragraph */
+    }
+
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Smaller gap */
+    }
+
+    .pictures {
+        flex-direction: column; /* Stack pictures vertically */
+        align-items: center; /* Center align */
+    }
+
+    .pictures .left, 
+    .pictures .right {
+        min-width: unset; /* Remove min-width constraint */
+    }
+
+    .center img {
+        width: 100%; /* Make the main image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
